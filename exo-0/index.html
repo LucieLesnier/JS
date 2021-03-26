@@ -11,55 +11,56 @@
 
         /* Section 1 */   
 
-        var name = "Joe";
-        var city = 'London';
-        var age = 32;
-        var isRed = true;
-        var isOld = age > 80;
+        var name = "Joe";   // Je déclare une variable qui aura pour attribut un nom qui sera un string
+
+        var city = 'London';            // Je déclare une variable qui aura pour attribut une ville qui sera un string
+        var age = 32;   // Je déclare une variable qui aura pour attribut un age qui sera un entier
+        var isRed = true; // Je déclare une variable qui aura pour attribut un booléen
+        var isOld = age > 80; // Je déclare une variable qui aura pour attribut un booléen
 
         var previousJobs = ['lawyer', 'developper', 'Professionnal climber'];
 
         function info(height, weight) {
             if (height > 180) {
-                console.log('Vous êtes grand');
+                console.log('Vous êtes grand'); //Je déclare une condition qui renverra une chaine de caractère si elle est true
             }
             if (weight < 0) {
-                console.log('oups, there is a problem');
+                console.log('oups, there is a problem'); //Je déclare une condition qui renverra une chaine de caractère si elle est true
             } else if ( weight < 15) {
-                console.log('Are you that slim ?')
+                console.log('Are you that slim ?') //Je déclare une condition qui renverra une chaine de caractère si elle est true
             } else {
-                console.log('Good !')
+                console.log('Good !') //Je déclare une condition qui renverra une chaine de caractère si elle est true
             }
         }
 
-        info(165, 45);
+        info(165, 45); //Info sert à afficher des informations dans la console
 
-        var myHeight = 175;
-        var myWeight = 86;
+        var myHeight = 175; //Je déclare une variable qui renverra un entier
+        var myWeight = 86; //Je déclare une variable qui renverra un entier
 
-        info(myHeight, myWeight);
+        info(myHeight, myWeight); //Info sert à afficher des informations dans la console
 
-        info(myHeight + 15, myWeight - 100);
+        info(myHeight + 15, myWeight - 100); //Info sert à afficher des informations dans la console et nous renvoie le resultat
 
         function toUpper(variable) {
-            return variable.toUpperCase();
+            return variable.toUpperCase();  // Une fonction qui retourne une variable sans paramètre
         }
 
-        var upperName = toUpper(name);
+        var upperName = toUpper(name); // Une variable qui reprend la fonction et qui lui attribut comme paramètre "name"
 
         for (i = 0; i < 3; i = i + 1) {
-            console.log(previousJobs[i]);
+            console.log(previousJobs[i]); // Une boucle qui affiche dans  la console un tableau
         }
 
         /* Section 2: */
 
-        // afficher la ville dans laquele Joe vit.     
+        console.info(city);   // afficher la ville dans laquele Joe vit.
 
-        // afficher si Joe est roux ou pas.
+        console.info(isRed); // afficher si Joe est roux ou pas.
 
         /* Section 3 */
 
-        // console.log(myVariable);
+        console.log(myVariable); //La variable myVariable n'est pas définit donc elle ne fonctionne pas.
 
         </script>
 
