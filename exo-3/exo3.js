@@ -8,7 +8,8 @@ function getPlayerChoice() {
 
     playInput = playInput.toLowerCase();
 
-    if(playInput=== 'rock' || playInput === 'paper' || playInput === 'scissors') {
+
+    if(playInput === 'rock' || playInput === 'paper' || playInput === 'scissors' || playInput === 'bomb') {
         console.log(playInput);
     return playInput;    
     }
@@ -50,6 +51,11 @@ function findWinner(playerChoice, computerChoice) {
         return 'Tied'
     
     }
+    else if (playerChoice === 'bomb') {
+        if (computerChoice === 'scissors' || computerChoice === 'rock' || computerChoice === 'paper') {
+        return 'Perfect Won GG';
+    }
+}
     else if (playerChoice === 'rock') {
         if(computerChoice === 'scissors') {
             return 'Won';
@@ -71,13 +77,24 @@ function findWinner(playerChoice, computerChoice) {
         if (computerChoice === 'paper') {
             return 'Won';
         }
+
         else {
             return 'Lost';
         }
-    }
-
+    }   
 }
 console.log(findWinner());
+
+
 function playGame() {
-  uChoice = getPlayerChoice('rock'); 
+    uChoice = getPlayerChoice('rock');
+    computerChoice = getComputerChoice();
+    
+    return findWinner(uChoice, computerChoice);
 }
+console.log(playGame());
+
+
+
+
+
