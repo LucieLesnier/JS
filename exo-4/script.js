@@ -14,7 +14,8 @@ var removeIndex = secretMessage.splice(change, 1);
 var addIndex = secretMessage.splice(6, 1, 'right');
 var deleteFirst = secretMessage.shift();
 var addFirst = secretMessage.unshift ('Programming');
-var removeMany = secretMessage.splice(5, 4, 'know');
+
+var removeMany = secretMessage.splice(secretMessage.indexOf('get'), 4, 'know');
 
 
 console.log(secretMessage.join());

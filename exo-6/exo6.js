@@ -45,10 +45,11 @@ function addPlayer(firstName, lastName, age) {
     )
     
 }
-addPlayer('Allan', 'Lucas', 12);
-addPlayer('Benjamin', 'Louis', 13);
 addPlayer('Cedric', 'Leo', 14);
 addPlayer('Diego', 'Louis', 15);
+addPlayer('Allan', 'Lucas', 12);
+addPlayer('Benjamin', 'Louis', 13);
+
 console.log(team);
 function addGames(opponent, teamPoints, opponentPoints) {
     team.games.push(
@@ -100,11 +101,14 @@ function averagePointsOtherStaff() {
  console.log(olderPlayerFromTeam.firstName);
  }
 olderPlayer();
-function orderBy(a, b) {
-    //team.players.sort(a - b) = team.players.firstName;
-    team.players.sort((a.firstName),(b.firstName))
-    console.log(team.players.sort(firstName));
-
-    
+function sortBy() {
+        //team.players.sort(a - b) = team.players.firstName;
+        team.players.sort(orderFirstName);
+        console.log(team.players);
 }
-orderBy();
+function orderFirstName(a, b) {
+    return a.firstName.localeCompare(b.firstName);
+}
+
+console.log(team.players);
+sortBy() 

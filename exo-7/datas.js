@@ -5,7 +5,8 @@ var jsonDatas=[
 		"description" : "Je suis une voiture",
 		"price" : 10000,
 		"quantity" : 2
-	},{
+	},
+	{
 		"name" :"Porsche 911",
 		"type" : "car",
 		"description" : "Je suis une belle voiture",

@@ -1,64 +1,29 @@
 // you can write js here
 console.log('exo-2');
 
-let isTesting = false;
-if ( isTesting === false) {
-    
-
-
-const myDate = new Date();
-
 var dateWeek = 'Pas encore le weekend :(';
 var dateWeekend = 'On est en weekend !';
 
 
-var dateActual = myDate.getDay(); 
-
+const myDate = new Date();
+var dateActual = myDate.getDay();
 var hourActual = myDate.getHours();
+var isTesting = false;
 
-
-
-
-    console.log(dateActual);
-    if(dateActual < 6 && dateActual < 7 ) {
-
-        console.log(dateWeek);
-
-    }
-    else {
-        console.log(dateWeekend)
-    }
-console.log(hourActual);
-    if(hourActual < 17 ) {
-        console.log(dateWeek);
-    }
-    else {
-        console.log(dateWeekeed);
-    }
+if (isTesting) {
+    dateActual = parseInt(prompt('quelle jour sommes nous ?'));
+    hourActual = parseInt(prompt('quelle heure est il ?'));
 }
-isTesting = true;
-if (isTesting === true) {
-   
 
-    var dateWeek = 'Pas encore le weekend :(';
-    var dateWeekend = 'On est en weekend !';
-    
-    
-    var dateActual = 26; 
-    
-    var hourActual = 14 ; 
-    console.log(dateActual);
-    if(dateActual < 27 && dateActual < 28 ) {
-        console.log(dateWeek);
-    }
-    else {
-        console.log(dateWeekend)
-    }
-console.log(hourActual);
-    if(hourActual < 17 ) {
-        console.log(dateWeek);
-    }
-    else {
-        console.log(dateWeekeed);
-    }
+console.log(dateActual);
+if ((dateActual ===0) || (dateActual ===6) || (dateActual === 5 && hourActual>=17) || (dateActual === 1 && hourActual < 9)) {
+
+    console.log(dateWeekend);
+
 }
+else {
+    console.log(dateWeek);
+}
+console.log(hourActual);
+
+
