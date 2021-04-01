@@ -1,17 +1,72 @@
 <!doctype html>
 <html lang="fr">
 
-  <head>
-    <meta charset="utf-8">
-  </head>
+<head>
+  <meta charset="utf-8">
+</head>
 
-  <body>
-    <div class="container">
-						<h1>Exercice 7</h1>
-				</div>
-        <ul id="myUl"></ul>   
-    <script src="datas.js"></script>
-    <script src="exo7.js"></script>
-  </body>
+<body>
+  <div class="container">
+    <h1>Exercice 7</h1>
+
+    
+    <label for="name"></label>
+    
+    <input type="button" id="btnAdd" value="Trier" onclick="printProducts()">
+
+    <input type="text" id="cat" minlength="10" maxlength="20" size="20">
+  </div>
+
+
+
+  <div>
+    <input type="checkbox" id="outOfStocks" name="outOfStocks" onclick="printProducts()" aria-checked="mixed" >
+    <label for="outOfstocks">Stock Disponibles ?</label>
+    
+  </div>
+  <select name="display" id="display">
+    <option value="">--Trier par--</option>
+    <option value="price" id="price">Prix</option>
+    <option value="nameDisplay" id="nameDisplay">Nom</option>
+</select>
+<select name="displayAsc" id="displayAsc">
+  <option value="">--Trier par--</option>
+  <option value="ascendant">Croissant</option>
+  <option value="descendant">Decroissant</option>
+</select>
+<br/><br>
+
+<div id="add">
+     <div class="form-example">
+      
+      <input type="text" name="name" id="name" placeholder="Nom" required>
+    </div>
+    <div class="form-example">
+    
+      <input type="price" name="price" id="newPrice" placeholder="Prix" required>
+    </div>
+    <div class="form-example">
+
+      <input type="type" name="type" id="type" placeholder="Type" required>
+    </div>
+    <div class="form-example">
+
+      <input type="description" name="description" id="description" placeholder="Description" required>
+    </div>
+    <div class="form-example">
+
+      <input type="quantity" name="quantity" id="quantity" placeholder="Quantité" required>
+    </div>
+    <div class="form-example">
+      <input type="submit" value="Ajouter à la liste" id="add" onclick="addItem()">
+    </div>
+
+</div>
+
+
+  <ul id="myUl"></ul>
+  <script src="datas.js"></script>
+  <script src="exo7.js"></script>
+</body>
 
 </html>
